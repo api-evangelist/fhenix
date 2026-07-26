@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.fhenix.zone/ + https://cofhe-docs.fhenix.zone/
+status_page: https://status.fhenix.zone/
+versioning:
+  scheme: network-stage
+  note: >-
+    Fhenix is a protocol/network, not a versioned REST API. Its developer stack
+    advances by network stage (testnets → mainnet). CoFHE is currently live on
+    public testnets (Ethereum Sepolia, Arbitrum Sepolia, Base Sepolia); mainnet
+    is planned. Client SDKs (cofhejs) carry semver npm versions.
+  docs: https://cofhe-docs.fhenix.zone/
+sla: {}
+deprecation: {}
+deprecated_operations: []
+notes: >-
+  No formal deprecation/Sunset-header policy is published (no REST API surface).
+  The prior-generation Fhenix testnet tooling (fhenixjs, fhenix-hardhat-plugin)
+  is effectively superseded by the CoFHE stack (cofhejs, cofhe-hardhat-plugin).

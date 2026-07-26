@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://registry.npmjs.org/ (npm) + https://github.com/fhenixprotocol
+packages:
+  - language: javascript
+    registry: npm
+    name: cofhejs
+    version: 0.3.1
+    description: The JavaScript/TypeScript SDK for Fhenix's CoFHE service — client-side encryption of inputs, permit signing, and unsealing of decrypted results.
+    url: https://www.npmjs.com/package/cofhejs
+    repository: https://github.com/FhenixProtocol/cofhejs
+    install: npm install cofhejs
+    official: true
+  - language: javascript
+    registry: npm
+    name: fhenixjs
+    version: 0.4.1
+    description: The original JavaScript SDK for the Fhenix network (predecessor to cofhejs; targets the earlier Fhenix testnet stack).
+    url: https://www.npmjs.com/package/fhenixjs
+    repository: https://github.com/FhenixProtocol/fhenix.js
+    install: npm install fhenixjs
+    official: true
+  - language: javascript
+    registry: npm
+    name: cofhe-hardhat-plugin
+    version: 0.3.1
+    description: Hardhat plugin providing utilities for interacting with the Fhenix CoFHE coprocessor in a Hardhat development environment.
+    url: https://www.npmjs.com/package/cofhe-hardhat-plugin
+    repository: https://github.com/FhenixProtocol/cofhe-hardhat-plugin
+    install: npm install cofhe-hardhat-plugin
+    official: true
+  - language: javascript
+    registry: npm
+    name: fhenix-hardhat-plugin
+    version: 0.4.1
+    description: The Fhenix Hardhat TypeScript plugin (legacy Fhenix testnet tooling; superseded by cofhe-hardhat-plugin for CoFHE).
+    url: https://www.npmjs.com/package/fhenix-hardhat-plugin
+    repository: https://github.com/FhenixProtocol/fhenix-hardhat-plugin
+    install: npm install fhenix-hardhat-plugin
+    official: true
+notes: >-
+  Fhenix's developer surface is a smart-contract + client-library stack, not a
+  REST API. On-chain FHE is provided by the Solidity libraries (FHE.sol) in the
+  FhenixProtocol/fhenix-contracts and cofhe-contracts repositories (consumed via
+  git/Foundry/npm rather than a single canonical registry package). The client
+  libraries above are the first-party off-chain SDKs.

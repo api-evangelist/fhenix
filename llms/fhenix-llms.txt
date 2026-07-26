@@ -1,0 +1,105 @@
+# Fhenix Documentation
+
+## Docs
+
+- [End-to-End Example](https://cofhe-docs.fhenix.zone/client-sdk/examples/end-to-end.md): A complete encrypt → store → decrypt flow using @cofhe/sdk
+- [Templates & Starters](https://cofhe-docs.fhenix.zone/client-sdk/examples/templates.md): Ready-to-use project templates for building with @cofhe/sdk
+- [CofheClient](https://cofhe-docs.fhenix.zone/client-sdk/foundry-plugin/cofhe-client.md): The in-Solidity SDK shim — one client per user, produces encrypted inputs and signed permits
+- [CofheTest](https://cofhe-docs.fhenix.zone/client-sdk/foundry-plugin/cofhe-test.md): The CofheTest abstract base contract — deploys CoFHE mocks and exposes plaintext assertions
+- [Getting Started](https://cofhe-docs.fhenix.zone/client-sdk/foundry-plugin/getting-started.md): Set up @cofhe/foundry-plugin for local FHE contract development and testing under Forge
+- [Testing](https://cofhe-docs.fhenix.zone/client-sdk/foundry-plugin/testing.md): Canonical test-writing patterns for FHE contracts under Foundry
+- [Client Setup](https://cofhe-docs.fhenix.zone/client-sdk/guides/client-setup.md): Configure and connect the @cofhe/sdk client with viem, Ethers, or wagmi
+- [Decrypt to Transact](https://cofhe-docs.fhenix.zone/client-sdk/guides/decrypt-to-tx.md): Decrypt with a verifiable Threshold Network signature for on-chain use
+- [Decrypt to View](https://cofhe-docs.fhenix.zone/client-sdk/guides/decrypt-to-view.md): Reveal encrypted values locally for UI display using permits
+- [Encrypting Inputs](https://cofhe-docs.fhenix.zone/client-sdk/guides/encrypting-inputs.md): Encrypt plaintext values with ZK proofs for use in FHE-enabled smart contracts
+- [Error Handling](https://cofhe-docs.fhenix.zone/client-sdk/guides/error-handling.md): Handle errors from @cofhe/sdk operations using typed CofheError objects
+- [Permits](https://cofhe-docs.fhenix.zone/client-sdk/guides/permits.md): Create and manage EIP-712 permits for decryption authorization
+- [Writing Decrypt Result to Contract](https://cofhe-docs.fhenix.zone/client-sdk/guides/writing-decrypt-result.md): Submit a decryptForTx result on-chain for verification or publishing
+- [Writing Encrypted Data to Contract](https://cofhe-docs.fhenix.zone/client-sdk/guides/writing-encrypted-data.md): Encrypt plaintext values and pass them directly into a contract call
+- [Client](https://cofhe-docs.fhenix.zone/client-sdk/hardhat-plugin/client.md): Create and connect a CofheClient in Hardhat tests
+- [Getting Started](https://cofhe-docs.fhenix.zone/client-sdk/hardhat-plugin/getting-started.md): Set up @cofhe/hardhat-plugin for local FHE contract development and testing
+- [Logging](https://cofhe-docs.fhenix.zone/client-sdk/hardhat-plugin/logging.md): Inspect FHE operations in your Hardhat test output
+- [Mock Contracts](https://cofhe-docs.fhenix.zone/client-sdk/hardhat-plugin/mock-contracts.md): Interact with mock CoFHE contracts and read plaintext values in tests
+- [Testing](https://cofhe-docs.fhenix.zone/client-sdk/hardhat-plugin/testing.md): Common patterns for writing Hardhat tests with the CoFHE plugin
+- [Installation](https://cofhe-docs.fhenix.zone/client-sdk/introduction/installation.md): Install and configure @cofhe/sdk for your project
+- [Mental Model](https://cofhe-docs.fhenix.zone/client-sdk/introduction/mental-model.md): Understand how data flows through FHE-enabled dApps using the @cofhe/sdk
+- [Migrating from cofhejs](https://cofhe-docs.fhenix.zone/client-sdk/introduction/migrating-from-cofhejs.md): Side-by-side migration guide from cofhejs to @cofhe/sdk
+- [Overview](https://cofhe-docs.fhenix.zone/client-sdk/introduction/overview.md): Introduction to @cofhe/sdk - the TypeScript client SDK for building FHE-enabled applications on Fhenix
+- [Quick Start: Foundry](https://cofhe-docs.fhenix.zone/client-sdk/quick-start/foundry.md): Set up a Foundry project with @cofhe/foundry-plugin, write a contract, and test the encrypt → store → decrypt flow
+- [Quick Start: Hardhat](https://cofhe-docs.fhenix.zone/client-sdk/quick-start/hardhat.md): Set up a Hardhat project with @cofhe/sdk, write a contract, and test the encrypt → store → decrypt flow
+- [Quick Start: JavaScript](https://cofhe-docs.fhenix.zone/client-sdk/quick-start/javascript.md): Get started with @cofhe/sdk in a browser or Node.js app
+- [Quick Start: React](https://cofhe-docs.fhenix.zone/client-sdk/quick-start/react.md): Get started with @cofhe/sdk in a React application
+- [Foundry Plugin Reference](https://cofhe-docs.fhenix.zone/client-sdk/reference/foundry-reference.md): Complete API reference for @cofhe/foundry-plugin
+- [Hardhat Plugin Reference](https://cofhe-docs.fhenix.zone/client-sdk/reference/hardhat-reference.md): Complete API reference for @cofhe/hardhat-plugin
+- [SDK Reference](https://cofhe-docs.fhenix.zone/client-sdk/reference/sdk-reference.md): Complete API reference for @cofhe/sdk
+- [ACL (Access Control Layer)](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/acl.md): On-chain contract that manages and enforces access control for ciphertexts, ensuring only authorized contracts can reference or decrypt them
+- [CommitmentRegistry](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/commitment-registry.md): Registry-chain contract that records FHE computation commitments. The Threshold Network reads it to verify ciphertext integrity before decrypting.
+- [CTRegistry](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/ct-registry.md): Registry contract that manages the mapping between temporary ciphertext hashes and their actual hash values, ensuring secure lookup and verification
+- [FheOs - Server](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/fheos-server.md): Off-chain computational layer that executes FHE operations and manages encrypted computations
+- [CoFHE Architecture Overview](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/overview.md): Comprehensive overview of the CoFHE architecture, components, and data flows for privacy-preserving blockchain computations
+- [Plaintexts Storage](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/plaintext-storage.md): Internal smart contract that manages storage and retrieval of plaintext values in the host chain with caching mechanisms
+- [Result Processor](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/result-processor.md): Off-chain service that handles FHE operation results and publishes them back to the blockchain
+- [Slim Listener](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/slim-listener.md): Off-chain service that monitors blockchain events and forwards FHE operation requests to the computation layer
+- [TaskManager](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/task-manager.md): On-chain entry point for CoFHE integration that initiates FHE operations, generates unique handles, and verifies decrypt result signatures
+- [Threshold Network](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/threshold-network.md): Off-chain distributed network that processes and executes decryption requests using Multi-Party Computation (MPC) protocols
+- [ZK Verifier](https://cofhe-docs.fhenix.zone/deep-dive/cofhe-components/zk-verifier.md): Off-chain service that verifies user inputs using Zero-Knowledge Proofs of Knowledge (ZKPoK) to ensure encrypted data is safe to use in smart contracts
+- [Decryption Request Flow](https://cofhe-docs.fhenix.zone/deep-dive/data-flows/decryption-request-flow.md): Complete flow of a decryption request in the CoFHE ecosystem through smart contracts
+- [Encryption Request Flow](https://cofhe-docs.fhenix.zone/deep-dive/data-flows/encryption-request-flow.md): Complete flow of the encryption request process using the Client SDK for encrypting data for private computation with smart contracts
+- [FHE Operation Request Flow](https://cofhe-docs.fhenix.zone/deep-dive/data-flows/fhe-operation-request-flow.md): Complete flow of an FHE operation request in the CoFHE ecosystem through smart contracts
+- [Off-Chain Decryption Flow](https://cofhe-docs.fhenix.zone/deep-dive/data-flows/off-chain-decryption-flow.md): Complete flow of off-chain decryption using decryptForTx and decryptForView
+- [Future Plans](https://cofhe-docs.fhenix.zone/deep-dive/research/future-plans.md): Roadmap for CoFHE decentralization, upcoming features, and planned improvements
+- [Research in Fhenix](https://cofhe-docs.fhenix.zone/deep-dive/research/research-in-fhenix.md): Research into novel cryptographic techniques and optimization of Fully Homomorphic Encryption for blockchain applications
+- [Best Practices](https://cofhe-docs.fhenix.zone/fhe-library/confidential-contracts/fherc20/best-practices.md): Security, gas optimization, and implementation guidelines for FHERC20 tokens
+- [Core Features](https://cofhe-docs.fhenix.zone/fhe-library/confidential-contracts/fherc20/core-features.md): Deep dive into FHERC20's encrypted balances, confidential transfers, and balance queries
+- [FHERC20 Wrappers](https://cofhe-docs.fhenix.zone/fhe-library/confidential-contracts/fherc20/fherc20-wrapper.md): Shield standard ERC20 or native tokens into confidential FHERC20 tokens
+- [Operators](https://cofhe-docs.fhenix.zone/fhe-library/confidential-contracts/fherc20/operators.md): Understanding FHERC20's time-based operator permission system
+- [FHERC20 Overview](https://cofhe-docs.fhenix.zone/fhe-library/confidential-contracts/fherc20/overview.md): Introduction to the FHERC20 confidential token standard (ERC-7984)
+- [Transfer Callbacks](https://cofhe-docs.fhenix.zone/fhe-library/confidential-contracts/fherc20/transfer-callbacks.md): Safe transfers with callbacks using IERC7984Receiver interface
+- [Access Control](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/access-control.md): Understanding and managing permissions for encrypted data in confidential smart contracts
+- [Common Errors](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/common-errors.md): Critical limitations and important considerations when working with CoFHE, including common issues and Solidity error references
+- [Conditions (if .. else)](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/conditions.md): Understanding why if..else isn't possible with FHE and exploring the alternatives
+- [Data Evaluation](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/data-evaluation.md): Understanding how FHE operations communicate with off-chain compute engines
+- [Decryption Operations](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/decryption-operations.md): Understanding how to decrypt encrypted data in FHE smart contracts
+- [FHE Encrypted Operations](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/encrypted-operations.md): Complete guide to FHE types and operations for confidential smart contracts
+- [Gas Costs and Benchmarks](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/gas-and-benchmarks.md): Performance metrics and gas cost analysis for FHE operations
+- [Inputs](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/inputs.md): Learn how to handle encrypted user inputs in confidential smart contracts
+- [Randomness](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/randomness.md): Generating encrypted random values in confidential smart contracts
+- [Require](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/require.md): Understanding require statements with encrypted data in FHE
+- [Trivial Encryption](https://cofhe-docs.fhenix.zone/fhe-library/core-concepts/trivial-encryption.md): Understanding the difference between trivially encrypted numbers and encrypted inputs
+- [Encrypted Auction Example](https://cofhe-docs.fhenix.zone/fhe-library/examples/auction-example.md): A complete example of building a confidential auction system using FHE
+- [Best Practices](https://cofhe-docs.fhenix.zone/fhe-library/introduction/best-practices.md): Key best practices for developing secure and efficient FHE smart contracts with CoFHE
+- [Overview](https://cofhe-docs.fhenix.zone/fhe-library/introduction/overview.md): A Solidity framework for secure, private computation on encrypted data within smart contracts
+- [Quick Start](https://cofhe-docs.fhenix.zone/fhe-library/introduction/quick-start.md): Set up your local development environment for building FHE smart contracts with CoFHE
+- [CoFHE Errors Package](https://cofhe-docs.fhenix.zone/fhe-library/reference/cofhe-errors.md): Decode Solidity smart contract errors and resolve 'execution reverted' messages instantly with @fhenixprotocol/cofhe-errors
+- [Error Reference](https://cofhe-docs.fhenix.zone/fhe-library/reference/cofhe-errors-reference.md): Complete reference of all 53 CoFHE smart contract errors with selectors, signatures, and parameters
+- [Access Control](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/access-control.md): allow, allowPublic, allowThis, allowSender, allowTransient, isAllowed, isPubliclyAllowed
+- [Arithmetic Operations](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/arithmetic.md): add, sub, mul, div, rem, square — encrypted math operations
+- [Bindings (Dot Notation)](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/bindings.md): Use encrypted types with dot notation instead of FHE.* prefix
+- [Bitwise Operations](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/bitwise.md): and, or, xor, not, shl, shr, rol, ror — encrypted bitwise operations
+- [Comparison Operations](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/comparison.md): eq, ne, lt, lte, gt, gte, min, max — encrypted comparison and selection
+- [Decryption](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/decryption.md): publishDecryptResult, verifyDecryptResult, getDecryptResult — on-chain decryption result handling
+- [FHE.sol Overview](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/overview.md): Encrypted data types, imports, and general usage of the FHE Solidity library
+- [Type Conversion](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/type-conversion.md): Convert between plaintext, encrypted input structs, and encrypted types
+- [Utility Functions](https://cofhe-docs.fhenix.zone/fhe-library/reference/fhe-sol/utility.md): isInitialized, unwrap, wrap — handle inspection and conversion utilities
+- [NEO - Fhenix AI Assistant](https://cofhe-docs.fhenix.zone/get-started/build-with-ai/ai-assistant.md)
+- [Build with AI](https://cofhe-docs.fhenix.zone/get-started/build-with-ai/build-with-ai.md): Learn how to use AI coding assistants effectively when building with Fhenix
+- [Get Funded](https://cofhe-docs.fhenix.zone/get-started/builder-support/get-funded.md): Information about funding opportunities for Fhenix builders
+- [Compatibility](https://cofhe-docs.fhenix.zone/get-started/introduction/compatibility.md): Essential version information and network compatibility for all CoFHE ecosystem components
+- [Fhenix](https://cofhe-docs.fhenix.zone/get-started/introduction/fhenix.md): The missing infrastructure for Confidential DeFi
+- [Support & Feedback](https://cofhe-docs.fhenix.zone/get-started/introduction/support-and-feedback.md): Get help, report issues, and provide feedback for the CoFHE project
+- [What is CoFHE?](https://cofhe-docs.fhenix.zone/get-started/introduction/what-is-cofhe.md): A high-level introduction to CoFHE — Fhenix's Fully Homomorphic Encryption coprocessor
+- [ACL Usage Examples](https://cofhe-docs.fhenix.zone/tutorials/acl-usage-examples.md): Practical examples of using Access Control Lists (ACL) to manage permissions for encrypted data
+- [Adding FHE to an Existing Contract](https://cofhe-docs.fhenix.zone/tutorials/adding-fhe-to-existing-contract.md): Step-by-step guide for integrating FHE capabilities into contracts you've already built
+- [Migrating from FHE.decrypt to the New Decryption Flow](https://cofhe-docs.fhenix.zone/tutorials/migrating-from-fhe-decrypt.md): Step-by-step guide for migrating Solidity contracts from FHE.decrypt to the new allowPublic + publishDecryptResult pattern
+- [CoFHE Tutorials Overview](https://cofhe-docs.fhenix.zone/tutorials/overview.md): A comprehensive guide to all available tutorials for learning and mastering CoFHE
+- [Your First FHE Contract](https://cofhe-docs.fhenix.zone/tutorials/your-first-fhe-contract.md): Step-by-step tutorial for building your first FHE-enabled smart contract from scratch
+
+## OpenAPI Specs
+
+- [openapi](https://cofhe-docs.fhenix.zone/api-reference/openapi.json)
+
+## Optional
+
+- [Website](https://www.fhenix.io/)
+- [Blog](https://www.fhenix.io/blog)
+- [Github](https://github.com/FhenixProtocol/cofhesdk)
